@@ -18,9 +18,10 @@ for _ in range(m):
     a, b, c = map(int, input().split())
     graph[a].append((b, c))
 
-# 방문하지 않은 노드이면서 시작노드와 최단거리인 노드 반환
+# 방문하지 않은 노드이면서 시작노드와 최단거리인 노드 반환한다
 def get_smallest_node():
     min_value = INF
+    M=0
     index = 0
     for i in range(1, n+1):
         if not visited[i] and distance[i] < min_value:
