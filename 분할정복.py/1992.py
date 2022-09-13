@@ -11,11 +11,7 @@ def solution(x,y,n):
         for j in range(y,y+n):
             if color!=list1[i][j]:
                 ans_a=ans_a+"("
-                solution(x,y,n//2)
-                solution(x,y+n//2,n//2)
-                solution(x+n//2,y,n//2)
                 
-                solution(x+n//2,y+n//2,n//2)
                 ans_a=ans_a+")"
                 return 
             
