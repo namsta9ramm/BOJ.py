@@ -18,10 +18,10 @@ ans_list=[]
 for i in list_1: #ex) (1,0) 
     ans=0
        
-    for j in range(len(house)):
+    for j in range(len(house)): 
         num=10000         
         for x,y in i: # x=1 y=0
-            num=min(num,abs(x-house[j][0])+abs(y-house[j][1]))
+            num=min(num,abs(x-house[j][0])+abs(y-house[j][1]))  #거리 구하기
         ans=ans+num
     
     ans_list.append(ans)
