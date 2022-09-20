@@ -1,6 +1,3 @@
-a,b=map(int,input().split())
-num1,num2,num3=map(int,input().split())
-list1=[]
-for i in range(a):
-    list1.append(list(map(int,input().split())))
-    
+graph1=[[list(map(int,input().split())) for _ in range(3)] for _ in range(2)]
+
+print(graph1)
