@@ -7,8 +7,9 @@ import sys
 input = sys.stdin.readline
 INF = int(1e9)
 
-n, m = map(int, input().split())
-start = int(input()) #시작노드
+n=int(input())
+m=int(input())
+#시작노드
 # 주어지는 그래프 정보 담는 N개 길이의 리스트
 graph = [[] for _ in range(n+1)]
 visited = [False] * (n+1)  # 방문처리 기록용
@@ -17,7 +18,7 @@ distance = [INF] * (n+1)   # 거리 테이블용
 for _ in range(m):
     a, b, c = map(int, input().split())
     graph[a].append((b, c))
-
+start,end= map(int,input().split())
 # 방문하지 않은 노드이면서 시작노드와 최단거리인 노드 반환한다
 def get_smallest_node():
     min_value = INF
@@ -51,8 +52,4 @@ def dijkstra(start):
 
 dijkstra(start)
 
-for i in range(1, n+1):
-    if distance[i] == INF:
-        print('INF')
-    else:
-        print(distance[i])
+print(distance[end])
