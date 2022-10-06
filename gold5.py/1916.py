@@ -11,6 +11,7 @@ for i in range(m):
     a, b, w = map(int, input().split())
     s[a].append([b, w])
 start, end = map(int, input().split())
+
 def dijkstra(start):
     dp[start] = 0
     heap = []
