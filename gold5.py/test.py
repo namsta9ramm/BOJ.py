@@ -1,3 +1,2 @@
-graph1=[[list(map(int,input().split())) for _ in range(3)] for _ in range(2)]
-
-print(graph1)
+a=[2,4,5,2]
+print(a.count(5))
