@@ -21,14 +21,15 @@ while q:
 # for _ in range(2) k=move[k]=8 , k=move[8]=4 , k=move[4]
 move_list=[]
 move_list.append(k)        
-for _ in range(dict[x]):
+for _ in range(dict[x]-1):
     k=move[k]
     move_list.append(k)
-
+move_list.append(n)
 
 move_list.reverse()
 for i in move_list:
     print(i,end=" ")
-print(move)
+
+
 
 
