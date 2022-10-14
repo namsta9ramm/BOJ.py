@@ -1,15 +1,25 @@
-import sys
-from collections import Counter
-n=int(input())
-list_num=[]
-for _ in range(n):
-    list_num.append(int(sys.stdin.readline()))
-
-#최빈값
-
-cnt=Counter(list_num).most_common()
-print(cnt)
-if len(cnt)>1 and cnt[0][1]==cnt[1][1]:
-  print(cnt[1][0])
-else :
-  print(cnt[0][0])
+def solution(X, Y):
+    ans=''
+    new_list=[]
+    ans_list=[]
+    print(list(set(X)&set(Y)))
+    if len(list(set(X)&set(Y)))==0:
+        return "-1"
+    elif list(set(X)&set(Y))==['0']:
+        return "0"
+    else:
+      for i in list(set(X)&set(Y)):
+            if X.count(i)>Y.count(i):    # x=
+                for _ in range(Y.count(i)):
+                    new_list.append(i)
+            else:
+                for _ in range(Y.count(i)):
+                    new_list.append(i)
+      for k in new_list:
+        ans_list.append(int(k))
+      ans_list.sort(reverse=True)
+      for k in ans_list:
+        ans+=str(k)
+      return ans
+print(solution("000","00"))
+    
