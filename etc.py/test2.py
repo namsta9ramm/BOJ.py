@@ -1,2 +1,4 @@
-a=[3,4,5,6,7]
-print(a[:5])
+if '남' in "남경현":
+    print("ㅇㅇ")
+else:
+    print("?")
