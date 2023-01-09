@@ -22,7 +22,7 @@ for i in range(len(possible_team)//2):
     #A를 제외한 나머지 팀
     team = possible_team[-i-1]
     stat_B = 0
-    for j in range(N//2):
+    for j in range(N//4):
         member = team[j]
         for k in team:
             stat_B += S[member][k]
